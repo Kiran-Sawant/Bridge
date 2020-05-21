@@ -58,9 +58,14 @@ etf = [ 'DBA.NYSE', 'EEM.NYSE', 'EWH.NYSE', 'EWW.NYSE', 'EWZ.NYSE', 'FXI.NYSE', 
 #____________Variable Assets______________#
 """Assets that can change name periodically"""
 
-variable_assets = ['EURBOBL_M0', 'EURBUND_M0', 'EURSCHA_M0', 'ITBTP10Y_M0', 'JGB10Y_M0',
-                   'UKGB_M0', 'UST05Y_M0', 'UST10Y_M0', 'UST30Y_M0', 'WTI_K0', 'BRENT_M0',
-                   'VIX_K0',  'DXY_M0']
+Future = '*_*, !Sugar*, !Corn*, !Coffee*, !Cocoa*, !Cotton*, !Wheat*, !OJ*, !Soyb*'
+
+variable_assets = list()
+all_ass_data = mt5.symbols_get(Future)
+
+for info in all_ass_data:
+    variable_assets.append(info.name)
+
 
 def insertion(symbol):
     mt5.symbol_select(symbol)
