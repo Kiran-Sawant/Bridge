@@ -19,7 +19,7 @@ wsStocks = wBook.sheets('Stocks')
 
 #______________________dictionaries__________________________#
 #__________Fixed Assets______________#
-'''Asset who's name doesn't change'''
+'''Assets who's name does not change.'''
 
 forex = ['EURUSD', 'GBPUSD', 'AUDUSD', 'NZDUSD', 'USDCHF', 'USDJPY', 'USDCAD', 'USDSGD',
         'USDCNH', 'USDCZK', 'USDDKK', 'USDHKD', 'USDHUF', 'USDMXN', 'USDNOK', 'USDPLN',
@@ -29,7 +29,8 @@ commodities = ['XAUUSD', 'XAUEUR', 'XAUAUD', 'XAGEUR', 'XAGUSD', 'XPDUSD', 'XPTU
                'XBRUSD', 'XNGUSD', 'XTIUSD']
 
 index = ['US30', 'US500', 'USTEC', 'DE30', 'STOXX50', 'UK100', 'JP225', 'AUS200', 'F40',
-         'HK50', 'IT40', 'CHINA50', 'ES35', 'US2000']
+         'HK50', 'IT40', 'CHINA50', 'ES35', 'US2000', 'CA60', 'NETH25', 'SE30', 'MidDE60',
+         'SWI20', 'CHINAH', 'SA40', 'NOR25', 'TecDE30']
 
 stonks_d = {'B8':'ABT.NYSE', 'B9':'ACB.NYSE', 'B10':'AGN.NYSE', 'B11':'AXP.NYSE', 'B12':'BA.NYSE', 'B13':'BAC.NYSE',
           'B14':'BLK.NYSE', 'B15':'BMY.NYSE', 'B16':'C.NYSE', 'B17':'CGC.NYSE', 'B18':'CVS.NYSE', 'B19':'CVX.NYSE',
@@ -56,7 +57,8 @@ etf = [ 'DBA.NYSE', 'EEM.NYSE', 'EWH.NYSE', 'EWW.NYSE', 'EWZ.NYSE', 'FXI.NYSE', 
         'XLF.NYSE', 'XLI.NYSE', 'XLP.NYSE', 'XLU.NYSE', 'XOP.NYSE', 'QQQ.NAS', 'TLT.NAS']
 
 #____________Variable Assets______________#
-"""Assets that can change name periodically"""
+"""Assets that can change name periodically.
+    Futures contracts change their names monthly"""
 
 Future = '*_*, !Sugar*, !Corn*, !Coffee*, !Cocoa*, !Cotton*, !Wheat*, !OJ*, !Soyb*'
 
@@ -66,6 +68,7 @@ all_ass_data = mt5.symbols_get(Future)
 for info in all_ass_data:
     variable_assets.append(info.name)
 
+variable_assets.sort()
 
 def insertion(symbol):
     mt5.symbol_select(symbol)
@@ -121,6 +124,6 @@ while True:
         wsStocks.range(i).value = ask(stonks_d[i])
 
     #___resting time____#
-    time.sleep(58)
+    time.sleep(20)
     print("now!!!")
     time.sleep(2)
