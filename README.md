@@ -6,7 +6,7 @@ There are 2 apps in the project, one for observing minimum exposures i.e. What w
 ## Usage
 Start MT5 terminal, open the excel file template and launch the specific python script in the perticular folder. Make sure you have an active connection with the brokers server. Once you start the python script, it will push asset price data to the respective cells in the spreadsheet. examples are shown below.
 
-### Minimum exposure
+## Minimum exposure
 <img src="snapshots/min_expo_index.PNG" style="width:720px; height:480px">
 
 The above example shows how every sheet is structured, every sheet in the file consists of similar tables for different assset class.
@@ -20,7 +20,7 @@ to trade (offcourse, that is you know how to trade them.). following columns are
 how much % & dollars the account will gain or lose, as you can see, for a move of 0.96% in CAC40 the account will gain/lose 6.31% or $69.13. lastly
 cell 2A & 2B shows the accounts current equity.
 
-### stocks sheet
+## stocks sheet
 <img src="snapshots/min_expo_stocks.PNG">
 In addition to other things, stocks and ETF sheets show daily Rollover charges for long/short positions in two separate columns. However, you will need
 to insert the interest rates for long/short positions in the cells above.
