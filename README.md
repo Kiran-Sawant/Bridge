@@ -20,7 +20,7 @@ to trade (offcourse, that is you know how to trade them.). following columns are
 how much % & dollars the account will gain or lose, as you can see, for a move of 0.96% in CAC40 the account will gain/lose 6.31% or $69.13. lastly
 cell 2A & 2B shows the accounts current equity.
 
-## stocks sheet
+### stocks sheet
 <img src="snapshots/min_expo_stocks.PNG">
 In addition to other things, stocks and ETF sheets show daily Rollover charges for long/short positions in two separate columns. However, you will need
 to insert the interest rates for long/short positions in the cells above.
@@ -28,7 +28,7 @@ to insert the interest rates for long/short positions in the cells above.
 The Minimum exposure excel file has sheets for commodities, indices, Stocks, ETF's, Bonds and Forex. If your broker provides a different set of assets,
 make changes in the asset lists and dictionaries and the `while` loop. might want to change the template as well
 
-### Market Exposure
+## Market Exposure
 <img src="snapshots/Market_Expo_bonds.PNG">
 
 The above example shows using Market Exposure sheet, for trading sovereign bond futures.
