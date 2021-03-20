@@ -30,7 +30,7 @@ make changes in the asset lists and dictionaries and the `while` loop. might wan
 ## Market Exposure
 <img src="snapshots/Market_Expo_bonds.PNG">
 
-The above example shows using Market Exposure excel sheet before trading sovereign bond futures. As you can see buying 100 Japanese 10Y bond futures is safer in terms of leverage than 200 US 10-Year futures. If we go long on both, a gain of 50bp on Japanese 10Y will give 7bp gain to account, similar type of assessment for US 10-Year future.
+The above example shows using Market Exposure excel sheet before trading sovereign bond futures. As you can see buying 200 Japanese 10Y bond futures is safer in terms of leverage than 200 US 10-Year futures. If we go long on both, a gain of 50bp on Japanese 10Y will give 7bp gain to account, similar type of assessment for US 10-Year future.
 
 Market exposure is similar to minimum exposure, except, it expects input from the user.
   - Enter the price at which you want to make an entry in **Entry Price** column.
